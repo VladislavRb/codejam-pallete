@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <button class="menu"></button>
+            <span>CodeJam - Pallete</span>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div class="toolbox">
+            <div class="toolbox__tool">
+                <button class="toolbox__bucket"></button>
+                <span class="toolbox__tool__text">Paint bucket</span>
+            </div>
+            <div class="toolbox__tool">
+                <button class="toolbox__color-picker"></button>
+                <span class="toolbox__tool__text">Choose color</span>
+            </div>
+            <div class="toolbox__tool">
+                <button class="toolbox__pencil"></button>
+                <span class="toolbox__tool__text">Pencil</span>
+            </div>
+            <div class="toolbox__tool">
+                <button class="toolbox__transform"></button>
+                <span class="toolbox__tool__text">Transform</span>
+            </div>
+        </div>
+
+        <div class="colorbox">
+            <div class="colorbox__color">
+                <input type="color" class="colorbox__color__icon"></input>
+                <span class="colorbox__color__text">Current color</span>
+            </div>
+            <div class="colorbox__color">
+                <div class="colorbox__color__icon"></div>
+                <span class="colorbox__color__text">Previous color</span>
+            </div>
+            <div class="colorbox__color">
+                <div class="colorbox__color__icon"></div>
+                <span class="colorbox__color__text">Red</span>
+            </div>
+            <div class="colorbox__color">
+                <div class="colorbox__color__icon"></div>
+                <span class="colorbox__color__text">Blue</span>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
