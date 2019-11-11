@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#canvas{
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    top: 17%;
+    left: 50%;
+    border: 1px rgb(0, 0, 0) solid;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 7%;
+    align-items: center;
+    border-width: 0 0 0 0;
+    border-bottom: 1px #000  solid;
+}
+
+.header button.menu{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: #fff;
+    border: 1px #000 solid;
+    border-radius: 2px;
+    background-image: url("assets/images/menu-button.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+}
+
+.header span{
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.toolbox{
+    position: fixed;
+    display: grid;
+    width: 15%;
+    height: 32%;
+    top: 10%;
+    left: 1%;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toolbox__tool{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toolbox__bucket, .toolbox__color-picker, .toolbox__pencil, .toolbox__transform{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.toolbox__tool:nth-child(2){
+    border-bottom: 1px #000 solid;
+}
+
+.toolbox__tool:nth-child(4){
+    opacity: 0.5;
+}
+
+.toolbox__bucket:hover, .toolbox__color-picker:hover, .toolbox__pencil:hover{
+    border: 1px rgba(0, 0, 0, 0.3) solid;
+}
+
+.toolbox__bucket:active, .toolbox__color-picker:active, .toolbox__pencil:active{
+    border: 1px rgb(0, 0, 0) dashed;
+}
+
+.toolbox__bucket{
+    background-image: url("assets/images/bucket.svg");
+}
+
+.toolbox__color-picker{
+    background-image: url("assets/images/color-picker.svg");
+}
+
+.toolbox__pencil{
+    background-image: url("assets/images/pencil.svg");
+}
+
+.toolbox__transform{
+    background-image: url("assets/images/arrows.svg");
+    cursor: default;
+}
+
+.toolbox__tool__text{
+    width: 70%;
+    height: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.colorbox{
+    position: fixed;
+    display: grid;
+    width: 15%;
+    height: 32%;
+    top: 50%;
+    left: 1%;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.colorbox__color{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.colorbox__color__icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px #000 solid;
+    cursor: pointer;
+    outline: none;
+}
+
+.colorbox__color:nth-child(2){
+    border-bottom: 1px #000 solid;
+}
+
+.colorbox__color:nth-child(1) .colorbox__color__icon{
+    background-color: #FFF;
+    border: 0;
+}
+
+.colorbox__color:nth-child(2) .colorbox__color__icon{
+    background-color: #000;
+}
+
+.colorbox__color:nth-child(3) .colorbox__color__icon{
+    background-color: rgb(255, 0, 0);
+}
+
+.colorbox__color:nth-child(4) .colorbox__color__icon{
+    background-color: rgb(0, 0, 255);
+}
+
+.colorbox__color__text{
+    width: 70%;
+    height: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
